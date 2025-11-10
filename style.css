@@ -1,0 +1,494 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    direction: ltr;
+    background: #1E3A8A;
+    color: #FFFFFF;
+    font-family: sans-serif;
+}
+
+/*Start SweetAlert2*/
+.swal2-popup {
+  width: 80% !important;  
+  max-width: 400px;
+  font-size: 11px;
+}
+
+.swal2-textarea{
+    width: 100%;
+}
+
+.swal2-input {
+    width: 100%;
+}
+
+.only-ok-btn {
+  background-color: #1E3A8A ; 
+}
+/*End SweetAlert2*/
+
+/*Start global*/
+button:hover {
+ background-color: #0F5594;
+ cursor: pointer;
+} 
+
+input{
+    border-radius: 8px;
+    margin: 10px auto;
+}
+
+button.send {
+    padding: 6px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    background: #0D5EA6;
+    color : white;
+    font-weight: bold ;
+    width: 85px;
+    font-size: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    display: block;
+}
+/*End global*/
+
+/*Start spinner*/
+.spinner {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    opacity: 0.6;
+    z-index: 999;
+    font-size: 24px;
+    display: none;
+}
+
+.wrapper {
+   display: none; 
+}
+
+.con {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999999;
+}
+
+.loading { 
+    width: 70px;
+    height: 70px;
+    border: 5px solid dimgrey;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite; 
+}
+
+@keyframes spin {
+    0% {
+     transform : rotate(0deg) ;  
+    }
+    100% {
+      transform : rotate(360deg) ;   
+    }
+}
+/*End spinner*/
+
+/*Start header*/
+header {
+    padding: 20px 15px;
+    border-bottom: 0.5px solid #F6F6F6;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+header a {
+    color: white;
+    font-size: 35px;
+}
+
+header img {
+    width: 120px;
+    height: 30px;
+}
+
+.burger-icon {
+    border: none;
+    background: transparent;
+}
+
+.burger-icon span {
+    width: 30px;
+    height: 3px;
+    margin-bottom: 7px;
+    background: white ;
+    display: block;
+    border-radius: 4px;
+}
+
+/*End header*/
+
+/*Start hero-section*/
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin : 2px 0;
+    font-weight: bold ;
+    color : goldenrod;
+    height: 200px;
+    position: relative;
+    font-size: 23px;   
+}
+
+.hero-section::before {
+   content: "";
+   position: absolute;
+   top:0;
+   left:0;
+   width: 100%; 
+   height: 100%;
+   background-color: rgba(1,1,0,0.5);
+   z-index:1;
+}
+
+.hero-section .box {
+   direction: ltr;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items:  center;
+   justify-content: center;
+   gap: 5px;
+   color: white;
+   z-index: 100;
+   background: blue;
+   width: 80%;
+   margin : 0 auto;
+   height: 100px;
+   padding: 5px;
+   border-radius: 6px;
+   background: rgba(1,2,0.5,0.2);
+   border: 1px solid white;
+}
+
+.hero-section .hero-head {
+    display: flex;
+    gap: 5px;
+    font-size: 48px;
+}
+
+.hero-section h1 span {
+    display: inline-block;
+    animation: ripple 1.2s ease-in-out;
+}
+
+.hero-section h1 span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.hero-section h1 span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.hero-section h1 span:nth-child(3) {
+    animation-delay:0.3s ;
+}
+
+.hero-section h1 span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.hero-section h1 span:nth-child(5) {
+    animation-delay:0.5s ;
+}
+
+.hero-section h1 span:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.hero-section h1 span:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.hero-section h1 span:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.hero-section h1 span:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.hero-section h1 span:nth-child(10) {
+    animation-delay: 1s;
+}
+
+@keyframes ripple {
+    0%,100% {
+        transform: translateY(0);
+   
+        color: white;}
+    50%{
+    transform: translateY(-20px);
+color: #0F5594;    
+    }
+}
+/*End hero-section*/
+
+/*Start divider*/
+.divider { 
+    width : 100%;
+    height: 30px;
+    background:  #DDDDDD;
+    margin: 0 0 20px;
+}   
+/*End divider*/
+ 
+/*Start createForm*/
+.create {
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin: 20px 0;
+}
+
+.create .headline {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.create input {
+    background: white;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 0;
+    border: 1px solid #DDDDDD;
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+    color: #585860;
+}
+
+.create input:focus {
+    border: 2px solid #585860;
+    outline: none;
+}
+
+.create input::placeholder {
+    color: #585860;
+    font-size: 16px;
+}
+
+.create .send {
+    width: 95px;
+    padding: 10px;
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+/*End createForm*/
+
+/*Start table*/
+.table-wrapper {
+   overflow-x: auto; 
+   width: 80%;
+   margin: 10px auto;
+}
+
+table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    margin: 10px auto;
+    direction: ltr;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 17px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-weight: bold;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+td , tr {
+   padding: 12px; 
+}
+
+table thead {
+  background-color: white;
+  color: #1E3A8A;
+}
+
+table thead tr th {
+    padding: 12px;
+}
+
+tbody tr:hover {
+  background-color: white;
+  color: #1E3A8A;
+}
+
+tbody tr:hover + table button{
+    border: 1px solid #1E3A8A;
+}
+
+table button {
+    width: fit-content;
+    padding: 8px;
+    margin: 4px;
+    font-size: 15px; 
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+table td button.delete {
+  background: #901E3E;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+table td button.edit-btn {
+  background-color: #2196f3;
+  margin-right: 5px;
+}
+/*End table*/
+
+/*Start footer*/
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    height: 80px;
+    border-top: 0.5px solid #DDDDDD;
+    direction: ltr;
+    background: #141212;
+    color: #DDDDDD;
+    margin-top: 25px;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    margin-bottom: 0;
+}
+
+footer .year {
+    margin-left: 3px;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/*End footer*/
+
+
+@media (max-width: 767px) {
+
+    /*Start header*/
+header a {
+    color: white;
+    font-size: 32px;
+}
+   /*End header*/
+
+/*Start hero-section*/
+.hero-section .hero-head {
+    font-size: 33px;   
+}
+/*End hero-section*/
+
+/*Start createForm*/
+
+.create .headline {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.create input {
+    width: 65%;
+    padding: 13px 0;
+    font-size: 17px;
+}
+
+
+.create input::placeholder {
+    font-size: 14px;
+}
+
+.create .send {
+    width: 80px;
+    padding: 10px;
+    font-size: 14px;
+}
+/*End createForm*/
+
+table {
+    width: 100%;
+    min-width: 700px;
+    font-size: 16px;
+}
+
+table button {
+    font-size: 13px; 
+}
+
+/*End table*/
+
+/*Start footer*/
+footer {
+    font-size: 18px;
+}
+/*End footer*/
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    
+}
